@@ -1,5 +1,5 @@
 {
-  "name": "hdaddressgenerator",
+  "name": "@buzhou/hdaddressgenerator",
   "version": "1.0.3",
   "description": "Generate hierarchical deterministic(HD) coin specific crypto addresses ( legacy, segwit, bech32 ) from single master key pair for over 190 different cryptocurrencies.",
   "main": "hdAddressGenerator.js",
@@ -18,6 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/bitcoinjs-lib": "^5.0.0",
+    "@buzhou/coinnetworklist": "^1.0.0",
     "base-x": "^3.0.8",
     "bchaddrjs": "^0.5.2",
     "bchaddrjs-slp": "^0.2.11",
@@ -28,7 +29,6 @@
     "bitcoinjs-lib": "^5.2.0",
     "bs58": "^4.0.1",
     "chai": "^4.2.0",
-    "coinnetworklist": "^1.0.0",
     "create-hash": "^1.2.0",
     "ed25519-hd-key": "^1.1.2",
     "ethereumjs-util": "^7.0.7",

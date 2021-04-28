@@ -342,6 +342,27 @@ class AddressGenerator {
 
     }
 
+    generateWanchainAddress(index){
+
+        let addressPrefix = ( this.coin.addressPrefix == undefined ) ? "0x" : this.coin.addressPrefix
+
+        let keyPair = {}
+        keyPair.path = this.path(index)
+        keyPair.rawPair = this.root.derivePath(keyPair.path)
+       
+        let ethPubkey = ethreumUtil.importPublic(keyPair.rawPair.publicKey)
+        let addressBuffer = ethreumUtil.publicToAddress(ethPubkey)
+        let hexAddress = addressBuffer.toString('hex')
+        let checksumAddress = ethreumUtil.toChecksumAddress(addressPrefix+hexAddress)
+        
+        keyPair.address = ethreumUtil.addHexPrefix(checksumAddress)
+        keyPair.privKey = addressPrefix+keyPair.rawPair.privateKey.toString('hex')
+        keyPair.pubKey = addressPrefix+keyPair.rawPair.publicKey.toString('hex')
+
+        return keyPair
+
+    }
+
     generateTronAddress(index){
 
         let addressPrefix = this.coin.addressPrefix

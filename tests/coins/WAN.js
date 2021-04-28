@@ -1,7 +1,7 @@
 module.exports={
 
-    longName:"Wanchain",
-    shortName:"WAN",
+    longName:"Ethereum",
+    shortName:"ETH",
     bip32ExtPubKeyBip44:"xpub6EqY3Q7DzBLbYb49JJpSSpcuqMaj1aFg74EKbYAmJYNzBJnTtmL7cJwENwG4yrkGCBstnVX2HRRcwoGiN74ZLUF2wfABfeyr4skKoNYDMqN",
 
     // BIP 44 Addresses
